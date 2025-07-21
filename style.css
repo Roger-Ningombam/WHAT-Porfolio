@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background: #0f172a;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  color: #38bdf8;
+}
+
+.hero-left p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+section {
+  padding: 40px;
+  background: white;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.services ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.services li {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+footer {
+  background: #0f172a;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Add this to your main CSS file */
+#about {
+  padding: 40px;
+  background: white;
+  margin: 20px;
+  border-radius: 10px;
+  /* Removed box-shadow to match Services */
+  max-width: 100%; /* Ensures responsiveness */
+}
+
+.about-me h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.about-me p {
+  margin-bottom: 15px;
+}
