@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // --- EMAIL COPY BUTTON ---
-    const copyBtn = document.getElementById('copy-email-btn');
+    /*const copyBtn = document.getElementById('copy-email-btn');
     const emailSpan = document.getElementById('email');
     copyBtn.addEventListener('click', () => {
         const email = emailSpan.textContent;
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }).catch(err => {
             console.error('Failed to copy email: ', err);
         });
-    });
+    });*/
 
     // --- GSAP SCROLL ANIMATIONS ---
     gsap.registerPlugin(ScrollTrigger);
@@ -152,5 +152,6 @@ document.addEventListener('DOMContentLoaded', function() {
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
         });
     }
+
 
 });
