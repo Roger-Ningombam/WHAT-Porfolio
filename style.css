@@ -374,7 +374,7 @@ h1, h2, h3, h4, h5, h6 {
 .profile-photo-container {
     width: 70%; 
     height: 520px;
-    background-color: var(--accent-primary);
+    background-color: black;
     border-radius: 15px;
     display: flex;
     justify-content: center;
@@ -871,4 +871,5 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+
 }
