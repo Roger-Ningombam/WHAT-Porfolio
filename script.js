@@ -241,24 +241,29 @@ function initGSAP() {
         ease: "none"
     });
 }
-function initGridHoverEffect() {
-    const gridBoxes = document.querySelectorAll('.grid-box');
 
-    gridBoxes.forEach(box => {
-        box.addEventListener('mousemove', e => {
-            // Get the position of the box relative to the viewport
-            const rect = box.getBoundingClientRect();
+// This function now targets any element with the .interactive-glow class
+function initGlowHoverEffect() {
+    // We've changed the selector from '.grid-box' to '.interactive-glow'
+    const interactiveElements = document.querySelectorAll('.interactive-glow');
 
-            // Calculate the mouse position relative to the box's top-left corner
+    interactiveElements.forEach(element => {
+        element.addEventListener('mousemove', e => {
+            const rect = element.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
 
-            // Set the CSS custom properties on the box element
-            box.style.setProperty('--mouse-x', `${x}px`);
-            box.style.setProperty('--mouse-y', `${y}px`);
+            element.style.setProperty('--mouse-x', `${x}px`);
+            element.style.setProperty('--mouse-y', `${y}px`);
         });
     });
 }
+
+// Don't forget to update the function call in your DOMContentLoaded listener
+document.addEventListener('DOMContentLoaded', function() {
+    // ... all your other init functions
+    initGlowHoverEffect(); // Formerly initGridHoverEffect()
+});
 
 // Call this function inside your main DOMContentLoaded listener
 document.addEventListener('DOMContentLoaded', function() {
